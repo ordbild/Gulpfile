@@ -1,6 +1,6 @@
 {
 	"description": "The default Gulpfile for the Ord&Bild dev team",
-	"name": "Ord&Bild Gulp",
+	"name": "Ord-Bild-Gulp",
 	"devDependencies": {
 		"gulp": "~3.5.2",
 		"gulp-rename": "~1.0.0",
@@ -8,6 +8,6 @@
 		"gulp-minify-css": "~0.3.0",
 		"gulp-concat": "~2.1.7",
 		"gulp-uglify": "~0.2.1",
-		"gulp-imagemin": "~0.1.5",
+		"gulp-imagemin": "~0.1.5"
 	}
 }
