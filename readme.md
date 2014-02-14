@@ -3,11 +3,11 @@ This is the default Gulpfile that we always use at [Ord&Bild](http://ordbild.se 
 It allows you to compile your SCSS-files, concat and minify your CSS and scripts and also optimize images.
 It assumes that your stylesheets, scripts and images are organized in the following way:
 
-assets/
-	img/
-	js/
-	css/
-	scss/
+assets/  
+	img/  
+	js/  
+	css/  
+	scss/  
 
 ##Requirements
 You need to have [Node](http://nodejs.org) and [Gulp](http://gulpjs.com) installed on your machine.
@@ -17,13 +17,13 @@ from the command line in your projects directory.
 
 ##Usage
 **Compile SCSS:**  
-gulp watch
+``gulp watch`
 
 **Optimize images:**  
-gulp images
+``gulp images`
 
 **Concat and minify the stylesheets**  
-gulp styles
+``gulp styles`
 
 **Concat and minify the scripts**  
-gulp scripts
+``gulp scripts`
