@@ -17,13 +17,13 @@ from the command line in your projects directory.
 
 ##Usage
 **Compile SCSS:**  
-``gulp watch`
+`gulp watch`
 
 **Optimize images:**  
-``gulp images`
+`gulp images`
 
 **Concat and minify the stylesheets**  
-``gulp styles`
+`gulp styles`
 
 **Concat and minify the scripts**  
-``gulp scripts`
+`gulp scripts`
