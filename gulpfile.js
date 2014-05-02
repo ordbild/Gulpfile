@@ -1,6 +1,6 @@
 /**
  * Ord&Bild Gulpfile
- * Version 1.0
+ * Version 1.2
  */
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     sass = require('gulp-ruby-sass');
 
-gulp.task('styles', function() {
+gulp.task('sass', function() {
 	return gulp.src('assets/scss**/*.scss')
 		.pipe(sass({ style: 'expanded' }))
 		.pipe(gulp.dest('assets/css'))
@@ -19,9 +19,23 @@ gulp.task('styles', function() {
 	    .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('styles', function() {
+	return gulp.src([
+			'assets/css/',
+		])
+		.pipe(concat('styles.css'))
+		.pipe(gulp.dest('assets/css'))
+		.pipe(rename({suffix: '.min'}))
+	    .pipe(minifycss())
+	    .pipe(gulp.dest('assets/css'));
+});
+
 gulp.task('scripts', function() {
-	return gulp.src(['assets/js/', 'assets/js/'])
-	    .pipe(concat('app.js'))
+	return gulp.src([
+		'assets/js/',
+		'assets/js/'
+		])
+	    .pipe(concat('scripts.js'))
 	    .pipe(gulp.dest('assets/js'))
 	    .pipe(rename({suffix: '.min'}))
 	    .pipe(uglify())
@@ -35,5 +49,5 @@ gulp.task('images', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('assets/scss/**/*.scss', ['styles']);
+	gulp.watch('assets/scss/**/*.scss', ['sass']);
 });
